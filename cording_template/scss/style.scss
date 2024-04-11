@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// commonフォルダ
+@use './common/reset';
+@use './common/common';
+
+// layoutフォルダ
+@use './layout/l-header';
+@use './layout/l-footer';
+
