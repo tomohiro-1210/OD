@@ -7,4 +7,11 @@
 // layoutフォルダ
 @use './layout/l-header';
 @use './layout/l-footer';
+@use './layout/l-kv';
 
+// projectフォルダ
+@use './project/specified';
+@use './project/recruit.scss';
+@use './project/contact';
+@use './project/privacy';
+@use './project/news';

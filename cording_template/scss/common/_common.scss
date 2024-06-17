@@ -1,12 +1,7 @@
-@use "variable" as var;
-
-p{
-  color: var.$orange;
-}
-
 html{
-    color: #fff;
-    font-family: "Hiragino Maru Gothic ProN";
+    color: #000;
+    background-color: #F9F9F9;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 img{
@@ -22,37 +17,78 @@ li{
 a{
     text-decoration: none;
     display: block;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 // デバイスでのオンオフ
 .pc-on{
   display: block;
 }
-.tb-on{
-  display: none;
-}
 .sp-on{
   display: none;
-}
-@media screen and (max-width:920px) {
-  .pc-on{
-    display: none;
-  }
-  .tb-on{
-    display: block;
-  }
-  .sp-on{
-    display: none;
-  }
 }
 @media screen and (max-width:768px) {
   .pc-on{
     display: none;
   }
-  .tb-on{
-    display: none;
-  }
   .sp-on{
     display: block;
+  }
+}
+
+.c-button{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 20px 40px;
+  margin: 0 auto;
+  background: linear-gradient(to right, #2B32B2, #007BFF);
+  border-radius: 32px;
+  transition: all 0.3s;
+}
+.c-button:after{
+  content: '';
+  display: block;
+  margin-left: 8px;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+}
+.c-button:hover{
+  color: #2B34B4;
+  background: linear-gradient(to right, #007BFF, #A3CDFF , #EAEBFE);
+  border-radius: 32px;
+}
+.c-button:hover:after{
+  content: '';
+  display: block;
+  margin-left: 8px;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #2B34B4;
+	border-right: 2px solid #2B34B4;
+	transform: rotate(45deg);
+}
+@media screen and (max-width:768px) {
+  .c-button{
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+  .c-button:after{
+    margin-left: 6px;
+    width: 6px;
+    height: 6px;
+  }
+  .c-button:hover:after{
+    margin-left: 6px;
+    width: 6px;
+    height: 6px;
   }
 }

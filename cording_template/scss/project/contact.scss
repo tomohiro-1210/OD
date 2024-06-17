@@ -1,0 +1,183 @@
+
+// お問い合わせフォーム
+.l-contact {
+    position: relative;
+    padding-bottom: 240px;
+    // 背景画像
+    &__bg{
+        // 位置調整
+        position: absolute;
+        bottom: -5px;
+        // 背景画像
+        background-image: url(../img/bg/bg-contact.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 813px;
+        z-index: -1;
+    }
+
+    // テキスト
+    &__text{
+        padding: 0 20px;
+        font-size: 16px;
+        color: #1A1A18;
+        text-align: center;
+        margin: 200px 0 139px;
+    }
+
+
+    // フォーム本体
+    &__form{
+        background-color: rgba($color: #B8B8B8, $alpha: 0.4);
+        max-width: 1000px;
+        width: calc(100% - 40px);
+        margin: 0 auto 160px;
+        border-radius: 120px 16px;
+        box-shadow: 12px 12px 0 0 rgba($color: #1a1a18, $alpha: 0.2);
+        &__inner{
+            width: auto;
+            padding: 120px 11% 130px 22%;
+            width: 67%;
+        }
+        // 入力内容
+        &__item {
+            display: flex;
+            align-items: flex-start;
+            span{
+                display: inline-block;
+                width: 150px;
+                margin-right: 26px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #1a1a18;
+            }
+            .required {
+                display: inline-block;
+                width: fit-content;
+                margin-right: 28px;
+                padding: 1px 8px;
+                background-color: #CB3C3C;
+                color: #f9f9f9;
+                font-size: 12px;
+                border-radius: 10px;
+            }
+            .required.hide{
+                opacity: 0;
+            }
+            input{
+                font-size: 16px;
+                height: 36px;
+                width: 100%;
+                max-width: 400px;
+                border: solid rgba($color: #1A1A18, $alpha: 0.3) 1px;
+                border-radius: 4px;
+            }
+            textarea{
+                font-size: 16px;
+                height: 160px;
+                width: 100%;
+                max-width: 400px;
+                border: solid rgba($color: #1A1A18, $alpha: 0.3) 1px;
+                border-radius: 4px;
+            }
+        }
+        &__item:not(:last-child){
+            margin-bottom: 22px;
+        }
+        &__item.purpose{
+            margin-bottom: 34px;
+        }
+        // チェックボックス
+        &__check{
+            label{
+                display: block;
+                color: black;
+            }
+            label:not(:last-child){
+                margin-bottom: 10px;
+            }
+            input{
+                width: 16px;
+                height: 16px;
+                margin-right: 28px;
+            }
+        }
+
+    }
+
+    // ボタン
+    &__button{
+        // margin-bottom: 240px;
+    }
+
+}
+// レスポンシブ
+@media screen and (max-width:768px) {
+    .l-contact {
+        padding-bottom: 120px;
+        // 背景画像
+        &__bg{
+            height: 410px;
+        }
+    
+        // テキスト
+        &__text{
+            font-size: 14px;
+            margin: 100px 0 70px;
+        }
+
+        &__form{
+            padding: 0;
+            width: calc(100% - 40px);
+            margin: 100px auto;
+            border-radius: 60px 10px;
+            box-shadow: 8px 8px 0 0 rgba($color: #1a1a18, $alpha: 0.2);
+            // フォーム本体
+            &__inner{
+                padding: 80px 20px;
+                margin: 0 auto;
+                width: auto;
+            }
+            // 入力内容
+            &__item {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                input{
+                    max-width: 100%;
+                }
+                label{
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                span{
+                    width: fit-content;
+                    margin-right: 10px;
+                }
+                .required {
+                    margin-right: 0px;
+                }
+            }
+            &__item:not(:last-child){
+                margin-bottom: 22px;
+            }
+            &__item.purpose{
+                margin-bottom: 34px;
+            }
+            // チェックボックス
+            &__check{
+                p:not(:last-child){
+                    margin-bottom: 5px;
+                }
+                input{
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    
+    }
+}

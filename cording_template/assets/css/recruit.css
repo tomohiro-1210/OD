@@ -1,0 +1,191 @@
+.p-recruit__top {
+  margin: 200px auto 97px;
+  padding: 0 20px;
+  width: auto;
+  position: relative;
+}
+.p-recruit__top__bg {
+  background-image: url(../img/bg/bg-rectuit-top.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 543px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.p-recruit__top__column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 120px;
+}
+.p-recruit__top__column__left {
+  width: 40%;
+  margin-right: 6%;
+  font-weight: 500;
+}
+.p-recruit__top__column__right {
+  width: 54%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.p-recruit__top__catch {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.p-recruit__top__text {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.p-recruit__about {
+  padding: 83px 20px 240px;
+  width: auto;
+  background-image: url(../img/bg/bg-rectuit-about.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.p-recruit__about__title {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.p-recruit__about__table {
+  max-width: 946px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.p-recruit__about__table dt, .p-recruit__about__table dt + dd {
+  font-family: "Noto Sans CJK JP";
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  text-align: left;
+  color: #fff;
+}
+.p-recruit__about__table dt {
+  padding: 40px 0px;
+  margin-right: 5px;
+  width: 180px;
+  color: #000000;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: solid 4px #2B34B4;
+}
+.p-recruit__about__table dt + dd {
+  padding: 40px 54px;
+  width: calc(100% - 180px - 113px);
+  font-size: 18px;
+  color: #000000;
+  border-bottom: solid 4px rgba(43, 52, 180, 0.4);
+}
+.p-recruit__about__mail {
+  display: inline-block;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+.p-recruit__about__text {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.p-recruit__about__button {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .p-recruit__top {
+    margin: 100px 0 50px;
+    position: relative;
+  }
+  .p-recruit__top__column {
+    flex-direction: column;
+    max-width: 540px;
+    margin: 0 auto 0px;
+  }
+  .p-recruit__top__column__left {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 30px;
+  }
+  .p-recruit__top__column__right {
+    width: auto;
+    max-width: 540px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 30px;
+  }
+  .p-recruit__top__catch {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .p-recruit__top__text {
+    font-size: 14px;
+    text-align: left;
+  }
+  .p-recruit__about {
+    margin: 0px;
+    padding: 50px 20px 120px;
+  }
+  .p-recruit__about__title {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+  .p-recruit__about__table {
+    margin: 0 auto 50px;
+    padding: 0;
+    display: block;
+  }
+  .p-recruit__about__table dt, .p-recruit__about__table dt + dd {
+    font-family: "Noto Sans CJK JP";
+    letter-spacing: 0.1em;
+    line-height: 30px;
+    color: #fff;
+  }
+  .p-recruit__about__table dt {
+    padding: 10px 0 0 10px;
+    margin-right: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+    border-bottom: none;
+  }
+  .p-recruit__about__table dt + dd {
+    padding: 10px;
+    width: calc(100% - 20px);
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    border-bottom: solid 2px rgba(43, 52, 180, 0.4);
+  }
+  .p-recruit__about__mail {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: underline;
+  }
+  .p-recruit__about__text {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+  .p-recruit__about__button {
+    font-weight: normal;
+  }
+}
+/*# sourceMappingURL=recruit.css.map */

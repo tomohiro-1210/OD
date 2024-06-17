@@ -1,0 +1,105 @@
+.privacy {
+  margin: 200px auto 240px;
+}
+.privacy__top, .privacy__text, .privacy__text--left01, .privacy__text--left02 {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 28px;
+  text-align: left;
+  color: #1a1a1a;
+}
+.privacy__contain, .privacy__top {
+  max-width: 870px;
+  margin: 0 auto;
+}
+.privacy__top {
+  margin-bottom: 30px;
+}
+.privacy__contain:not(:last-child) {
+  margin-bottom: 50px;
+}
+.privacy__title {
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 0.05em;
+  line-height: 28px;
+  text-align: left;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+.privacy__text {
+  position: relative;
+  padding-left: 0px;
+  word-break: normal;
+}
+.privacy__text--left01 {
+  padding-left: 30px;
+  margin-bottom: 0px;
+}
+.privacy__text--left02 {
+  padding-left: 60px;
+  margin-bottom: 10px;
+}
+.privacy__text--left03 {
+  padding-left: 90px;
+  margin-bottom: 10px;
+}
+.privacy__text--nospace {
+  padding-left: 0px;
+}
+.privacy__text--topspace {
+  padding-left: 0px;
+  margin-top: 16px;
+}
+.privacy__text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 920px) {
+  .privacy__contain, .privacy__top {
+    width: calc(100% - 40px);
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy {
+    margin: 100px auto 100px;
+  }
+  .privacy__top, .privacy__text, .privacy__text--left01, .privacy__text--left02 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .privacy__top {
+    margin-bottom: 20px;
+  }
+  .privacy__contain:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .privacy__title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .privacy__text {
+    position: relative;
+  }
+  .privacy__text--left01 {
+    padding-left: 20px;
+  }
+  .privacy__text--left02 {
+    padding-left: 40px;
+  }
+  .privacy__text--nospace {
+    padding-left: 0px;
+  }
+  .privacy__text--topspace {
+    padding-left: 0px;
+    margin-top: 12px;
+  }
+  .privacy__text:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+/*# sourceMappingURL=privacy.css.map */

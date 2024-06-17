@@ -1,0 +1,109 @@
+.privacy{
+    margin: 200px auto 240px;
+    &__top,&__text,&__text--left01,&__text--left02{
+        font-weight: normal;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        line-height: 28px;
+        text-align: left;
+        color: #1a1a1a;
+    }
+    &__contain,&__top {
+        max-width: 870px;
+        margin: 0 auto;
+    }
+    &__top {
+        margin-bottom: 30px;
+    }
+    &__contain:not(:last-child){
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        letter-spacing: 0.05em;
+        line-height: 28px;
+        text-align: left;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+    }
+    &__text {
+        position: relative;
+        padding-left: 0px;
+        word-break: normal;
+        &--left01{
+            padding-left: 30px;
+            margin-bottom: 0px;
+        }
+        &--left02{
+            padding-left: 60px;
+            margin-bottom: 10px;
+        }
+        &--left03{
+            padding-left: 90px;
+            margin-bottom: 10px;
+        }
+        &--nospace{
+            padding-left: 0px;
+        }
+        &--topspace{
+            padding-left: 0px;
+            margin-top: 16px;
+        }
+    }
+    &__text:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+
+// タブレット版
+@media screen and (max-width:920px) {
+    .privacy{
+        &__contain,&__top {
+            width: calc(100% - 40px);
+            padding: 0 20px;
+        }
+    }
+}
+
+// スマホ版
+@media screen and (max-width:768px) {
+    .privacy{
+        margin: 100px auto 100px;
+        &__top,&__text,&__text--left01,&__text--left02{
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__top {
+            margin-bottom: 20px;
+        }
+        &__contain:not(:last-child){
+            margin-bottom: 40px;
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            position: relative;
+            &--left01{
+                padding-left: 20px;
+            }
+            &--left02{
+                padding-left: 40px;
+            }
+            &--nospace{
+                padding-left: 0px;
+            }
+            &--topspace{
+                padding-left: 0px;
+                margin-top: 12px;
+            }
+        }
+        &__text:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.p-recruit {
+    // 採用ページ上部
+    &__top {
+        margin: 200px auto 97px;
+        padding: 0 20px;
+        width: auto;
+        // 位置調整
+        position: relative;
+        &__bg {
+            background-image: url(../img/bg/bg-rectuit-top.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            // 幅調整
+            width: 100vw;
+            height: 543px;
+            // 位置調整
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        &__column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto 120px;
+        }
+        &__column__left {   
+            width: calc(100% - 54% - 6%);
+            margin-right: 6%;
+            font-weight: 500;
+        }
+        &__column__right {
+            width: 54%;
+            height: fit-content;
+        }
+        &__catch {
+            font-size: 48px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 60px
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+    }
+    // 採用ページ下部(募集要項)
+    &__about {
+        padding: 83px 20px 240px;
+        width: auto;
+        // 背景画像
+            background-image: url(../img/bg/bg-rectuit-about.png);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        &__title{
+            font-size: 48px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        // 募集要項一覧
+        &__table {
+            max-width: 946px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            dt,dt+dd{
+                font-family: "Noto Sans CJK JP";
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                line-height: 30px;
+                text-align: left;
+                color: #fff;
+            }
+            dt{
+                padding: 40px 0px;
+                margin-right: 5px;
+                width: 180px;
+                color: #000000;
+                text-align: center;
+                font-size: 18px;
+                border-bottom: solid 4px #2B34B4;
+            }
+            dt+dd{
+                padding: 40px 54px;
+                width: calc(100% - 180px - 113px);
+                font-size: 18px;
+                color: #000000;
+                border-bottom: solid 4px rgba($color: #2B34B4, $alpha: 0.4);
+            }
+        }
+        &__mail{
+            display: inline-block;
+            margin-left: 20px;
+            text-decoration: underline;
+        }
+        // テキスト
+        &__text {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+        // ボタン
+        &__button{
+            font-weight: normal;
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .p-recruit {
+        // 採用ページ上部
+        &__top {
+            margin: 100px 0 50px;
+            // 位置調整
+            position: relative;
+            &__column {
+                flex-direction: column;
+                max-width: 540px;
+                margin: 0 auto 0px;
+            }
+            &__column__left {   
+                width: 100%;
+                margin-right: 0%;
+                margin-bottom: 30px;
+            }
+            &__column__right {
+                width: auto;
+                max-width: 540px;
+                height: fit-content;
+                margin-bottom: 30px;
+            }
+            &__catch {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+            &__text {
+                font-size: 14px;
+                text-align: left;
+            }
+    
+        }
+        // 採用ページ下部(募集要項)
+        &__about {
+            margin: 0px;
+            padding: 50px 20px 120px;
+            &__title{
+                font-size: 30px;
+                margin-bottom: 50px;
+            }
+            // 募集要項一覧
+            &__table {
+                margin: 0 auto 50px;
+                padding: 0;
+                display: block;
+                dt,dt+dd{
+                    font-family: "Noto Sans CJK JP";
+                    letter-spacing: 0.1em;
+                    line-height: 30px;
+                    color: #fff;
+                }
+                dt{
+                    padding: 10px 0 0 10px;
+                    margin-right: 5px;
+                    width: 100%;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000000;
+                    text-align: left;
+                    border-bottom: none;
+                }
+                dt+dd{
+                    padding: 10px;
+                    width: calc(100% - 20px);
+                    font-size: 14px;
+                    color: #000000;
+                    text-align: left;
+                    border-bottom: solid 2px rgba($color: #2B34B4, $alpha: 0.4);
+                }
+            }
+            &__mail{
+                display: inline-block;
+                margin-left: 10px;
+                text-decoration: underline;
+            }
+            // テキスト
+            &__text {
+                font-size: 14px;
+                text-align: left;
+                margin-bottom: 50px;
+            }
+            // ボタン
+            &__button{
+                font-weight: normal;
+            }
+        }
+    
+    }
+}
