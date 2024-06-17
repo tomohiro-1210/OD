@@ -1,6 +1,6 @@
 // お知らせ一覧
 .p-archive-news {
-    padding: 100px 20px;
+    padding: 200px 20px 240px;
     // 背景画像
     background-image: url(../img/bg/bg-news.png);
     background-size: cover;
@@ -42,6 +42,7 @@
 }
 @media screen and (max-width:768px) {
     .p-archive-news {
+        padding: 100px 20px;
         &__list {
             margin: 0 auto;
             border-top: solid 1px black;
@@ -178,7 +179,7 @@
         width: calc(100% - 720px - 3%);
     }
     // 最新情報
-    &__title {
+    &__information {
         font-size: 32px;
         margin-bottom: 40px;
     }
@@ -186,6 +187,9 @@
     &__dotted {
         border-top: dotted 4px #007BFF;
         margin-bottom: 40px;
+    }
+    &__dotted:last-child{
+        margin-bottom: 0;
     }
     // 記事一覧
     &__list {

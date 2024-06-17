@@ -1,0 +1,190 @@
+.p-company__sec-title {
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+.p-company__mission {
+  padding: 200px 20px 100px;
+  background-image: url(../img/bg/bg-company-mission.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.p-company__mission__title {
+  margin-bottom: 120px;
+}
+.p-company__mission__text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+}
+.p-company__history {
+  padding: 120px 20px 131px;
+  background-image: url(../img/bg/bg-company-history-pc.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.p-company__history__title {
+  margin-bottom: 80px;
+}
+.p-company__history__flow {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+}
+.p-company__history__flow--pc {
+  max-width: 1054px;
+}
+.p-company__history__flow--sp {
+  max-width: 400px;
+  width: 80%;
+}
+.p-company__about {
+  background-image: url(../img/bg/bg-company-about.png);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.p-company__about__title {
+  margin-bottom: 31px;
+}
+.p-company__about__top {
+  padding: 180px 0px 120px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1004px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  height: 480px;
+}
+.p-company__about__left {
+  width: 43%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.p-company__about__text {
+  padding: 24px 24px 24px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  background-color: rgba(249, 249, 249, 0.8);
+}
+.p-company__about__right {
+  width: 64%;
+  position: absolute;
+  right: 0;
+  z-index: 5;
+}
+.p-company__about__table {
+  padding: 0 20px 240px;
+}
+.p-company__about__table dl {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0px auto;
+  border: solid 1px #2B34B4;
+}
+.p-company__about__table dt {
+  width: 161px;
+  color: #000000;
+  padding: 11px 24px;
+  background-color: rgba(43, 52, 180, 0.1);
+  border-bottom: solid 1px #2B34B4;
+}
+.p-company__about__table dt:last-child {
+  border-bottom: none;
+}
+.p-company__about__table dt + dd {
+  width: calc(100% - 209px - 48px);
+  color: #000000;
+  padding: 11px 24px;
+}
+.p-company__about__table dt + dd:not(:last-child) {
+  border-bottom: solid 1px #2B34B4;
+}
+
+@media screen and (max-width: 768px) {
+  .p-company__sec-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .p-company__mission {
+    padding: 100px 20px;
+  }
+  .p-company__mission__title {
+    margin-bottom: 60px;
+  }
+  .p-company__mission__text {
+    font-size: 14px;
+  }
+  .p-company__history {
+    padding: 60px 20px 65px;
+  }
+  .p-company__history__title {
+    margin-bottom: 40px;
+  }
+  .p-company__about__title {
+    margin-bottom: 20px;
+  }
+  .p-company__about__top {
+    padding: 90px 0px 0px;
+    display: block;
+    position: static;
+    height: auto;
+  }
+  .p-company__about__left {
+    width: 100%;
+    margin-bottom: 30px;
+    position: static;
+    transform: translateY(0%);
+  }
+  .p-company__about__text {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .p-company__about__right {
+    width: 100%;
+    position: static;
+  }
+  .p-company__about__table {
+    padding: 0 20px;
+  }
+  .p-company__about__table dl {
+    display: block;
+    margin: 100px auto;
+    font-size: 14px;
+  }
+  .p-company__about__table dt {
+    width: calc(100% - 30px);
+    color: #000000;
+    padding: 8px 15px;
+    background-color: rgba(43, 52, 180, 0.1);
+    border-bottom: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 14px;
+  }
+  .p-company__about__table dt:last-child {
+    border-bottom: none;
+  }
+  .p-company__about__table dt + dd {
+    width: calc(100% - 30px);
+    color: #000000;
+    padding: 8px 15px;
+  }
+  .p-company__about__table dt + dd:not(:last-child) {
+    border-bottom: solid 1px #2B34B4;
+  }
+}
+/*# sourceMappingURL=company.css.map */

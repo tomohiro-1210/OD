@@ -44,7 +44,7 @@
         // 入力内容
         &__item {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             span{
                 display: inline-block;
                 width: 150px;
@@ -89,6 +89,9 @@
         &__item.purpose{
             margin-bottom: 34px;
         }
+        &__item.start{
+            align-items: flex-start;
+        }
         // チェックボックス
         &__check{
             label{
@@ -109,7 +112,7 @@
 
     // ボタン
     &__button{
-        // margin-bottom: 240px;
+        border: none;
     }
 
 }

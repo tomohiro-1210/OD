@@ -35,7 +35,7 @@
 }
 .l-contact__form__item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .l-contact__form__item span {
   display: inline-block;
@@ -82,6 +82,9 @@
 .l-contact__form__item.purpose {
   margin-bottom: 34px;
 }
+.l-contact__form__item.start {
+  align-items: flex-start;
+}
 .l-contact__form__check label {
   display: block;
   color: black;
@@ -94,6 +97,10 @@
   height: 16px;
   margin-right: 28px;
 }
+.l-contact__button {
+  border: none;
+}
+
 @media screen and (max-width: 768px) {
   .l-contact {
     padding-bottom: 120px;

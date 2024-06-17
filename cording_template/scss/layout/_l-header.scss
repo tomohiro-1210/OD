@@ -126,8 +126,9 @@
     .l-header {
         height: 54px;
         &__logo {
+            max-width: 300px;
+            width: 70%;
             img{
-                width: 300px;
                 height: auto;
             }
         }

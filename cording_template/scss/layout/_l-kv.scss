@@ -38,8 +38,8 @@
         }
     }
 }
-.l-kv__bg.l-kv__bg-aobut {
-    background-image: url(../img/kv/kv-about.png);
+.l-kv__bg.l-kv__bg-company {
+    background-image: url(../img/kv/kv-company.png);
 }
 .l-kv__bg.l-kv__bg-works {
     background-image: url(../img/kv/kv-works.png);
@@ -57,14 +57,14 @@
 @media screen and (max-width:768px) {
     .l-kv {
         width: 100vw;
-        height: 200px;
+        height: 240px;
         &__bg {
             width: 100%;
             height: 100%;
         }
         
         &__page-name {
-            font-size: 30px;
+            font-size: 24px;
         }
     }
 }

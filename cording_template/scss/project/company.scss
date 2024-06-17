@@ -1,0 +1,223 @@
+.p-company {
+    // セクションタイトル
+    &__sec-title {
+        font-size: 48px;
+        font-weight: 500;
+        text-align: center;
+    }
+    // ダクトのパイオニアとしての使命
+    &__mission {
+        padding: 200px 20px 100px;
+        // 背景画像
+        background-image: url(../img/bg/bg-company-mission.png);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        &__title{
+            margin-bottom: 120px;
+        }
+    }
+    &__mission__text {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    // 沿革
+    &__history {
+        padding: 120px 20px 131px;
+        // 背景画像
+        background-image: url(../img/bg/bg-company-history-pc.png);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        &__title{
+            margin-bottom: 80px;
+        }
+        &__flow {
+            height: fit-content;
+            margin: 0 auto;
+            &--pc{
+                max-width: 1054px;
+            }
+            &--sp{
+                max-width: 400px;
+                width: 80%;
+            }
+        }
+    }
+
+    // 社長
+    &__about{
+        // 背景画像
+        background-image: url(../img/bg/bg-company-about.png);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        &__title {
+            margin-bottom: 31px;
+        }
+        &__top {
+            padding: 180px 0px 120px;
+            // 配置調整
+            display: flex;
+            align-items: center;
+            position: relative;
+            // 間隔調整
+            max-width: 1004px;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            height: 480px;
+        }
+        &__left {
+            width: 43%;
+            // 配置調整
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        &__text {
+            padding: 24px 24px 24px 0;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            text-align: left;
+            background-color: rgba($color: #F9F9F9, $alpha: 0.8);
+        
+        }
+        &__right {
+            width: 64%;
+            // 配置調整
+            position: absolute;
+            right: 0;
+            z-index: 5;
+        
+        }
+        // 会社概要の一覧表
+        &__table{
+            padding: 0 20px 240px;
+            dl{
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 1000px;
+                margin: 0px auto;
+                border: solid 1px #2B34B4;
+            }
+            dt{
+                width: calc(209px - 48px);
+                color: #000000;
+                padding: 11px 24px;
+                background-color: rgba($color: #2B34B4, $alpha: 0.1);
+                border-bottom: solid 1px #2B34B4;
+            }
+            dt:last-child{
+                border-bottom: none;
+            }
+            dt+dd{
+                width: calc(100% - 209px - 48px);
+                color: #000000;
+                padding: 11px 24px;
+            }
+            dt+dd:not(:last-child){
+                border-bottom: solid 1px #2B34B4;
+            }
+            
+        }
+
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .p-company {
+        // セクションタイトル
+        &__sec-title {
+            font-size: 30px;
+            font-weight: 500;
+            text-align: center;
+        }
+        // ダクトのパイオニアとしての使命
+        &__mission {
+            padding: 100px 20px;
+            &__title{
+                margin-bottom: 60px;
+            }
+        }
+        &__mission__text {
+            font-size: 14px;
+        }
+    
+        // 沿革
+        &__history {
+            padding: 60px 20px 65px;
+            &__title{
+                margin-bottom: 40px;
+            }
+        }
+    
+        // 社長
+        &__about{
+            &__title {
+                margin-bottom: 20px;
+            }
+            &__top {
+                padding: 90px 0px 0px;
+                // 配置調整
+                display: block;
+                position: static;
+                // 間隔調整
+                height: auto;
+            }
+            &__left {
+                width: 100%;
+                margin-bottom: 30px;
+                // 配置調整
+                position: static;
+                transform: translateY(0%);
+            }
+            &__text {
+                padding: 10px;
+                font-size: 14px;
+            }
+            &__right {
+                width: 100%;
+                // 配置調整
+                position: static;
+            }
+            // 会社概要の一覧表
+            &__table {
+                padding: 0 20px;
+                dl{
+                    display: block;
+                    margin: 100px auto;
+                    font-size: 14px;
+                }
+                dt{
+                    width: calc(100% - 30px);
+                    color: #000000;
+                    padding: 8px 15px;
+                    background-color: rgba($color: #2B34B4, $alpha: 0.1);
+                    border-bottom: none;
+                    height: fit-content;
+                    font-size: 14px;
+                }
+                dt:last-child{
+                    border-bottom: none;
+                }
+                dt+dd{
+                    width: calc(100% - 30px);
+                    color: #000000;
+                    padding: 8px 15px;
+                }
+                dt+dd:not(:last-child){
+                    border-bottom: solid 1px #2B34B4;
+                }
+                
+            }
+        }
+        
+    }
+}

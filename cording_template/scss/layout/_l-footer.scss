@@ -15,7 +15,6 @@
     }
     &__nav {
         margin: 0px auto 96px;
-        padding: 20px 0;
     }
     &__lists {
         display: flex;
@@ -31,7 +30,7 @@
         }
     }
     &__list:not(:last-child){
-        margin-right: 20px;
+        margin-right: 54px;
     }
 
 
@@ -67,7 +66,7 @@
 
 @media screen and (max-width:768px) {
     .l-footer{
-        padding: 50px 20px;
+        padding: 40px 20px 20px;
         &__logo{
             img{
                 width: 300px;
@@ -76,19 +75,23 @@
         }
         &__nav {
             margin: 0px auto 40px;
-            padding: 20px 0;
+            padding: 0;
         }
         &__lists {
-            display: block;
-            justify-content: center;
-            align-items: center;
-        
+            max-width: 300px;
+            margin: 0 auto;
+            flex-wrap: wrap;
         }
         &__list {
+            width: 50%;
             a{
-                font-size: 18px;
+                font-size: 16px;
                 text-align: center;
             }
+        }
+        &__list:nth-child(2n) {
+            width: calc(50% - 20px);
+            margin-left: 20px;
         }
         &__list:not(:last-child){
             margin-right: 0px;
@@ -102,6 +105,7 @@
         }
         &__privacys{
             justify-content: center;
+            margin-bottom: 20px;
         }
         &__privacy{
             a{
