@@ -56,6 +56,8 @@
       &__item {
         display: flex;
         flex-wrap: wrap;
+        min-height: 400px;
+        overflow: hidden;
         // 背景画像
         background-image: url(../img/bg/bg-works-list.png);
         background-size: 90% 90%;
@@ -78,7 +80,7 @@
       }
       &__texts__wrapper, &__texts__wrapper-reverse {
         position: relative;
-        top: 50%;
+        top: 60%;
         transform: translateY(-50%);
         width: 80%;
         max-width: 450px;
@@ -151,6 +153,7 @@
                 width: 100%;
                 font-weight: 500;
                 position: static;
+                transform: translateY(0%);
                 img{
                     object-fit: cover;
                 }

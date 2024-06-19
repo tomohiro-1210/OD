@@ -184,3 +184,17 @@
     display: block;
 }
 
+// ロゴの切り替え
+.white-logo{
+    display: block;
+}
+.white-logo.hide{
+    display: none;
+}
+.black-logo{
+    display: none;
+}
+.black-logo.show{
+    display: block;
+}
+

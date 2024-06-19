@@ -55,6 +55,7 @@
 .l-fv {
     width: 100%;
     height: 120vh;
+    overflow: hidden;
     &__inner {
         display: flex;
         align-items: center;
@@ -301,6 +302,7 @@
 // 採用情報
 .l-top-recruit {
     margin: 180px 0;
+    padding: 0 20px;
     &__title {
         margin-bottom: 100px;
     }

@@ -2,7 +2,6 @@ html{
     color: #000;
     background-color: #F9F9F9;
     font-family: "Noto Sans JP", sans-serif;
-    overflow-x: hidden;
 }
 
 img{
@@ -92,4 +91,33 @@ a{
     width: 6px;
     height: 6px;
   }
+}
+
+// フェードイン
+[data-fadein] {
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateY(150px);
+}
+[data-fadein].show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+[data-leftin] {
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(-150px);
+}
+[data-leftin].show {
+  opacity: 1;
+  transform: translateX(0px);
+}
+[data-rightin] {
+  opacity: 0;
+  transition: all 0.6s;
+  transform: translateX(150px);
+}
+[data-rightin].show {
+  opacity: 1;
+  transform: translateX(0px);
 }

@@ -60,6 +60,7 @@
 .l-fv {
   width: 100%;
   height: 120vh;
+  overflow: hidden;
 }
 .l-fv__inner {
   display: flex;
@@ -283,6 +284,7 @@
 
 .l-top-recruit {
   margin: 180px 0;
+  padding: 0 20px;
 }
 .l-top-recruit__title {
   margin-bottom: 100px;
