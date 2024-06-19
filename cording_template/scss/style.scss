@@ -10,10 +10,11 @@
 @use './layout/l-kv';
 
 // projectフォルダ
-@use './project/specified';
-@use './project/recruit.scss';
-@use './project/contact';
-@use './project/privacy';
-@use './project/news';
-@use './project/company';
-@use './project/works';
+@use './project/a-index.scss';
+@use './project/b-company.scss';
+@use './project/c-works.scss';
+@use './project/d-recruit.scss';
+@use './project/e-f-news.scss';
+@use './project/g-contact.scss';
+@use './project/h-privacy.scss';
+@use './project/i-specified.scss';

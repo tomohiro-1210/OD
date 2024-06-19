@@ -2,24 +2,37 @@
 $(".l-header__hamburger").click(function () {
     $(this).toggleClass('open');
     $(".l-header-sp-menu").toggleClass('open');
+    $(".l-header-sp-menu").toggleClass('hide');
+
 });
 
 // フェードインのアニメーション
-$(window).on("scroll", function() {
-    //フェードイン
-    $('[data-fadeIn]').each(function(index, el) {
-        if( $(window).scrollTop() > ( $(el).offset().top - 100 ) ){
-            $(el).addClass('is-over');
-        }
+$(function() {
+    // ウィンドウが読み込まれた時にコンテンツをスライドインする
+    $('.l-fv__top').addClass('show');
+    $('.l-fv__middle').addClass('show');
+    $('.l-fv__bottom').addClass('show');
+    $('.l-fv__right').addClass('show');
+});
+
+
+//   fvのスライダー
+$(function () {
+    // PC版
+    $('.l-fv__right').slick({
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: false,
+        arrows: false,
     });
-    $('[data-leftIn]').each(function(index, el) {
-        if( $(window).scrollTop() > ( $(el).offset().top - 100 ) ){
-            $(el).addClass('is-over');
-        }
-    });
-    $('[data-rightIn]').each(function(index, el) {
-        if( $(window).scrollTop() > ( $(el).offset().top - 100 ) ){
-            $(el).addClass('is-over');
-        }
+    
+    // SP版
+    $('.l-fv__sp__imgs').slick({
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        dots: false,
+        arrows: false,
     });
   });
