@@ -8,10 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://use.typekit.net/hgi0fdm.css">
+
     <!-- slickのCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ファビコン -->
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/common/favicon.ico">
 
     <!-- style.css -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
@@ -91,7 +95,8 @@
        <section class="l-top-about">
         <div class="l-top-about__bg"></div>
         <h2 class="c-top-title l-top-about__title" data-fadeIn>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-01.png" alt="title" class="c-top-title__en">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-01.png" alt="title" class="c-top-title__en"> -->
+          <span class="c-top-title__en">About Us</span>
           <span class="c-top-title__ja">技術で空気を繋ぐ</span>
         </h2>
         <p class="l-top-about__catch" data-fadeIn>ダクトのパイオニアとして<br>
@@ -113,7 +118,8 @@
           <!-- タイトルなど -->
           <div class="l-top-news__left">
             <h2 class="c-top-title l-top-news__title" data-fadeIn>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-02.png" alt="title" class="c-top-title__en">
+              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-02.png" alt="title" class="c-top-title__en"> -->
+              <span class="c-top-title__en">News</span>
               <span class="c-top-title__ja">最新情報</span>
             </h2>
             <div class="pc-on">
@@ -150,7 +156,8 @@
       <!-- 事業内容 -->
        <section class="l-top-business">
         <h2 class="c-top-title l-top-business__title" data-fadeIn>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-03.png" alt="title" class="c-top-title__en">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-03.png" alt="title" class="c-top-title__en"> -->
+          <span class="c-top-title__en">Business</span>
           <span class="c-top-title__ja">事業内容</span>
         </h2>
         <!-- 事業案内 -->
@@ -217,7 +224,8 @@
       <!-- 採用情報 -->
        <section class="l-top-recruit">
         <h2 class="c-top-title l-top-recruit__title" data-fadeIn>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-04.png" alt="title" class="c-top-title__en">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-04.png" alt="title" class="c-top-title__en"> -->
+          <span class="c-top-title__en">Recruit</span>
           <span class="c-top-title__ja">採用情報</span>
         </h2>
         <!-- 採用情報 -->
@@ -240,7 +248,8 @@
       <!-- 社員インタビュー -->
        <section class="l-top-interview">
         <h2 class="c-top-title l-top-interview__title" data-fadeIn>
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-05.png" alt="title" class="c-top-title__en">
+          <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-05.png" alt="title" class="c-top-title__en"> -->
+          <span class="c-top-title__en">Interview</span>
           <span class="c-top-title__ja">社員インタビュー</span>
         </h2>
         
@@ -305,7 +314,8 @@
           <!-- タイトルなど -->
           <div class="l-top-contact__left">
             <h2 class="c-top-title l-top-contact__title" data-fadeIn>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-06.png" alt="title" class="c-top-title__en">
+              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top-title-06.png" alt="title" class="c-top-title__en"> -->
+              <span class="c-top-title__en">Contact</span>
               <span class="c-top-title__ja">お問い合わせ</span>
             </h2>
             <p class="l-top-contact__text" data-fadeIn>ダクトのこと、施工のことなどのご相談は、お気軽にお問い合わせください。採用に関してのお問い合わせもお待ちしております。</p>

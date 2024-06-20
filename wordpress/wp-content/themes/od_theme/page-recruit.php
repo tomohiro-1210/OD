@@ -85,7 +85,7 @@
                     </dl>
             <!-- /about -->
             <p class="p-recruit__about__text">ここまでご覧くださりありがとうございます。詳細はお気軽にお問い合わせくださいませ。</p>
-            <a href="#" class="c-button p-recruit__about__button">応募・エントリーに進む</a>
+            <a href="<?php echo esc_url(get_home_url()); ?>/contact" class="c-button p-recruit__about__button">応募・エントリーに進む</a>
           </div><!-- 採用ページ下部 -->
        </section>
       <!-- /採用情報 -->
