@@ -3,6 +3,8 @@ $(".l-header__hamburger").click(function () {
     $(this).toggleClass('open');
     $(".l-header-sp-menu").toggleClass('open');
     $(".l-header-sp-menu").toggleClass('hide');
+    $(".l-header-menu-logo").toggleClass('open');
+    $(".l-header-display-logo").toggleClass('hide');
 
 });
 
@@ -42,7 +44,8 @@ $(function () {
     $('.l-fv__right').slick({
         fade: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 2500,
+        speed: 1000,
         dots: false,
         arrows: false,
     });
@@ -51,7 +54,7 @@ $(function () {
     $('.l-fv__sp__imgs').slick({
         fade: true,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 2500,
         dots: false,
         arrows: false,
     });
@@ -62,12 +65,14 @@ $(document).ready(function() {
     const whiteLogo = $('.white-logo');
     const blackLogo = $('.black-logo');
     var kv = $('.l-kv'); // 対象の要素
+    var fv = $('.l-fv'); // 対象の要素
     var kvOffsetTop = kv.outerHeight();
+    var fvOffsetTop = fv.outerHeight();
 
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop();
 
-        if (scrollTop > kvOffsetTop) {
+        if (scrollTop > kvOffsetTop || scrollTop > fvOffsetTop) {
             whiteLogo.addClass('hide');
             blackLogo.addClass('show');
         } else {
@@ -76,3 +81,23 @@ $(document).ready(function() {
         }
     });
 });
+
+//テキストのカウントアップ+バーの設定
+var bar = new ProgressBar.Line(percent, {//id名を指定
+    strokeWidth: 0,//進捗ゲージの太さ
+    duration: 1000,//時間指定(1000＝1秒)
+    trailWidth: 0,//線の太さ
+    text: {//テキストの形状を直接指定 
+      style: {//天地中央に配置
+        color:'#f9f9f9',
+      },
+      autoStyleContainer: false //自動付与のスタイルを切る
+    },
+    step: function(state, bar) {
+      bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+    }
+  });
+  //アニメーションスタート
+  bar.animate(0.5, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+    $("#loading").delay(500).fadeOut(500);//アニメーションが終わったら#splashエリアをフェードアウト
+  }); 

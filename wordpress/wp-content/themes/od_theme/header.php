@@ -20,8 +20,15 @@
   <!-- header -->
   <header class="l-header fixed">
     <div class="l-header__inner">
-      <h1 class="l-header__logo white-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
-      <h1 class="l-header__logo black-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
+      <!-- ヘッダーの時表示 -->
+      <div class="l-header-display-logo">
+        <h1 class="l-header__logo white-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
+        <h1 class="l-header__logo black-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
+      </div>
+      <!-- メニューの時表示 -->
+      <div class="l-header-menu-logo">
+        <h1 class="l-header__logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
+      </div>
       <nav class="l-header__nav">
           <ul class="l-header__menu">
             <li class="l-header__list"><a href="<?php echo esc_url(get_home_url()); ?>/company">会社概要</a></li>

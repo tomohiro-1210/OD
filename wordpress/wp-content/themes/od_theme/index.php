@@ -25,7 +25,20 @@
     <!-- header -->
     <header class="l-header fixed">
       <div class="l-header__inner">
-        <h1 class="l-header__logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
+        <!-- ヘッダーの時表示 -->
+        <div class="l-header-display-logo">
+          <div class="pc-on">
+          <h1 class="l-header__logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
+          </div>
+          <div class="sp-on">
+            <h1 class="l-header__logo white-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
+            <h1 class="l-header__logo black-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
+          </div>
+        </div>
+        <!-- メニューの時表示 -->
+        <div class="l-header-menu-logo">
+          <h1 class="l-header__logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
+        </div>
         <nav class="l-header__nav">
           <ul class="l-header__menu">
             <li class="l-header__list"><a href="<?php echo esc_url(get_home_url()); ?>/company">会社概要</a></li>
@@ -56,7 +69,15 @@
       </ul>
     </div>
     <!-- /header -->
-
+    <div class="loading" id="loading">
+      <div class="loading__inner">
+        <div class="loading__load">Loading Now…</div>
+        <div class="loading__logo" id="loading-logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/loading-logo.png" alt="logo-hoshitetsu">
+        </div>
+        <div class="loading__percent" id="percent"></div>
+      </div>
+    </div>
     <!-- main -->
     <main>
       <!-- TOPFV -->
@@ -101,13 +122,13 @@
         </h2>
         <p class="l-top-about__catch" data-fadeIn>ダクトのパイオニアとして<br>
           従事してきた我々の使命</p>
-        <p class="l-top-about__text" data-fadeIn>有限会社オーディーは平成13年に創業し長きにわたってダクトを通じ、<br>
+        <p class="l-top-about__text" data-fadeIn>有限会社オーディーは平成13年に<br class="sp-on">創業し長きにわたってダクトを通じ、<br>
           日本の空気を技術で守ってまいりました。<br>
-          経験に基づく豊富な知識と技術で安全で高品質な施工はもちろん、<br>
-          お客様のご希望に沿った最適なダクト工法のご提案と設置を行なっています。<br>
+          経験に基づく豊富な知識と技術で<br class="sp-on">安全で高品質な施工はもちろん、<br>
+          お客様のご希望に沿った最適なダクト工法の<br class="sp-on">ご提案と設置を行なっています。<br>
           技術の踏襲のみならず、最新技術の知識の構築により<br>
-          未来へ繋ぐダクトを目指しダクトで空気を変える、未来へ繋ぐ。<br>
-          このスローガンを掲げ、お客様のご要望に全力でお応えしていきます。</p>
+          未来へ繋ぐダクトを目指しダクトで<br class="sp-on">空気を変える、未来へ繋ぐ。<br>
+          このスローガンを掲げ、お客様の<br class="sp-on">ご要望に全力でお応えしていきます。</p>
         <a href="<?php echo esc_url(get_home_url()); ?>/company" class="c-button top-button">会社概要をもっと見る</a>
        </section>
       <!-- /技術で空気を繋ぐ -->
