@@ -82,6 +82,13 @@
     <main>
       <!-- TOPFV -->
        <div class="l-fv">
+        <!-- スクロールダウン -->
+         <div class="l-fv__scrolldown">
+          <p class="l-fv__srcolldown__text">Scroll down</p>
+          <div class="l-fv__srcolldown__arrow" id="scrolldown__arrow">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/scrolldown.png" alt="scrolldown">
+          </div>
+         </div>
         <!-- pc版FV -->
          <div class="pc-on">
             <div class="l-fv__inner">
@@ -148,24 +155,27 @@
             </div>
           </div>
           <!-- 最新情報一覧 -->
+                <?php 
+                $args = array(
+                'post_type' => 'news',//ポストタイプのスラッグ
+                'order' => 'DESC',//並び順、DESCは最新ジュン
+                'posts_per_page' => 3//何件表示するか？
+                );
+                $my_query = new WP_Query($args);//$my_queryにargsを入れている
+                if($my_query->have_posts()) :
+                ?>
            <div class="l-top-news__right">
             <div class="l-top-news__list" data-fadeIn>
+            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
               <!-- ニュース -->
-              <a href="#" class="l-top-news__item">
-                <p class="l-top-news__date">2024.04.01</p>
-                <p class="l-top-news__text">最新情報タイトルが入ります</p>
+              <a href="<?php the_permalink(); ?>" class="l-top-news__item">
+                <p class="l-top-news__date"><?php echo the_time('Y.m.d'); ?></p>
+                <p class="l-top-news__text"><?php echo the_title(); ?></p>
               </a><!-- ニュース -->
-              <!-- ニュース -->
-              <a href="#" class="l-top-news__item">
-                <p class="l-top-news__date">2024.04.01</p>
-                <p class="l-top-news__text">最新情報タイトルが入ります</p>
-              </a><!-- ニュース -->
-              <!-- ニュース -->
-              <a href="#" class="l-top-news__item">
-                <p class="l-top-news__date">2024.04.01</p>
-                <p class="l-top-news__text">最新情報タイトルが入ります</p>
-              </a><!-- ニュース -->
+              <?php endwhile; ?>
             </div>
+            <?php endif ?>
             <div class="sp-on">
               <a href="<?php echo esc_url(get_home_url()); ?>/news" class="c-button top-button">最新情報一覧へ</a>
             </div>

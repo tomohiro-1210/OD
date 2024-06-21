@@ -101,3 +101,9 @@ var bar = new ProgressBar.Line(percent, {//id名を指定
   bar.animate(0.5, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
     $("#loading").delay(500).fadeOut(500);//アニメーションが終わったら#splashエリアをフェードアウト
   }); 
+
+//   scrolldown
+document.getElementById('scrolldown__arrow').addEventListener('click', function() {
+    var element = document.querySelector('.animated-element');
+    element.classList.toggle('move-up');
+});
