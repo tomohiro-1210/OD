@@ -215,6 +215,7 @@ input.c-button:hover:after,
 .l-header {
   width: 100%;
   height: 84px;
+  margin-top: 9px;
 }
 .l-header__inner {
   max-width: 1365px;
@@ -225,6 +226,9 @@ input.c-button:hover:after,
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.l-header__logo{
+  /* background-color: rgba(0, 123, 255, 0.5); */
 }
 .l-header__logo img {
   width: 400px;
@@ -247,6 +251,16 @@ input.c-button:hover:after,
   padding: 0 13px;
   height: 84px;
 }
+.l-header__list:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 1px;
+  height: 84px;
+  background: #007BFF;
+  transform: translateY(-50%) rotate(30deg);
+}
 .l-header__list a {
   color: #F9F9F9;
   font-size: 20px;
@@ -258,22 +272,29 @@ input.c-button:hover:after,
   height: fit-content;
   line-height: 84px;
   transition: all 0.3s;
+  position: relative;
 }
-.l-header__list a:hover{
-  text-decoration: underline;
+.l-header__list a::after {
+  /*アンダーラインのスタイル*/
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #F9F9F9;
+  bottom: 25px;
+  left: 0;
+  /*幅を0に設定*/
+  width: 0;
+  /*アニメーションの速度設定*/
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.l-header__list a:hover::after {
+  /*幅を100%に設定*/
+  width: 100%;
 }
 .l-header__list:not(:last-child) {
   margin-right: 20px;
-}
-.l-header__list:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  width: 1px;
-  height: 84px;
-  background: #007BFF;
-  transform: translateY(-50%) rotate(30deg);
 }
 .l-header__hamburger {
   width: 84px;
@@ -322,7 +343,7 @@ input.c-button:hover:after,
 
 .l-header.fixed {
   position: fixed;
-  top: 15px;
+  top: 0px;
   right: 0;
   z-index: 9999;
 }
@@ -345,13 +366,20 @@ input.c-button:hover:after,
   .l-header__nav {
     display: none;
   }
+  .l-header__logo{
+    max-width: 300px;
+  }
   .l-header__hamburger {
     display: block;
+  }
+  .l-header.fixed{
+    top: 0;
   }
 }
 @media screen and (max-width: 768px) {
   .l-header {
     height: 54px;
+    margin-top: 0px;
   }
   .l-header__logo {
     max-width: 300px;
@@ -681,25 +709,22 @@ input.c-button:hover:after,
 
 .l-fv {
   width: 100%;
-  height: 120vh;
   overflow: hidden;
   position: relative;
+  margin-top: 102px;
 }
 .l-fv__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
 }
 .l-fv__left {
-  width: 38%;
-  position: absolute;
-  top: 10%;
-  left: 0;
+  width: 33%;
 }
 .l-fv__top {
   width: 90%;
   margin-left: 15%;
-  transition: all 6s;
+  transition: all 2s;
   transform: translateY(-100%);
 }
 .l-fv__top.show {
@@ -709,7 +734,7 @@ input.c-button:hover:after,
   width: 45%;
   margin: 32px 0 32px 15%;
   transform: translateX(-200%);
-  transition: all 6.5s;
+  transition: all 2.5s;
 }
 .l-fv__middle.show {
   transform: translateX(0);
@@ -717,18 +742,18 @@ input.c-button:hover:after,
 .l-fv__bottom {
   width: 60%;
   transform: translate(-100%, 100%);
-  transition: all 6s;
+  transition: all 2s;
 }
 .l-fv__bottom.show {
   transform: translate(0%, 0%);
 }
 .l-fv__right {
-  width: 85%;
+  width: 84%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   transform: translateX(100%);
-  transition: all 6s;
+  transition: all 2s;
 }
 .l-fv__right.show {
   transform: translateX(0%);
@@ -737,19 +762,19 @@ input.c-button:hover:after,
 /* スクロールダウン */
 .l-fv__scrolldown {
   position: absolute;
-  bottom: calc(15% + 100px);
-  right: 2%;
+  bottom: calc(15%);
+  right: 10%;
   z-index: 10;
 }
 
 .l-fv__srcolldown__text {
-  font-family: "ironstrike-stencil", sans-serif;
+  font-family: "Zen Old Mincho", serif;
   font-weight: 700;
-  font-style: normal;
-  font-size: 32px;
+  font-size: 3vw;
   color: rgba(249, 249, 249, 0.8);
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 17px;
+  text-shadow: 0px 0px 8px #151515;
 }
 
 .l-fv__srcolldown__arrow {
@@ -771,18 +796,19 @@ input.c-button:hover:after,
 @media screen and (max-width: 1400px) {
   .l-fv {
     width: 100%;
-    height: 800px;
   }
   /* スクロールダウン */
   .l-fv__scrolldown {
-    bottom: calc(15% + 100px);
+    bottom: calc(15%);
   }
   
 }
 @media screen and (max-width: 1200px) {
   .l-fv {
     width: 100%;
-    height: 600px;
+  }
+  .l-fv__left {
+    width: 33%;
   }
   /* スクロールダウン */
   .l-fv__scrolldown {
@@ -793,7 +819,18 @@ input.c-button:hover:after,
 @media screen and (max-width: 1000px) {
   .l-fv {
     width: 100%;
-    height: 500px;
+  }
+  .l-fv__left {
+    width: 30%;
+  }
+
+  /* スクロールダウン */
+  .l-fv__scrolldown {
+    bottom: 10%;
+  }
+  .l-fv__srcolldown__text {
+    white-space: nowrap;
+    font-size: 3vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -802,6 +839,7 @@ input.c-button:hover:after,
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    margin-top: 0px;
   }
   
   /* スクロールダウン */
@@ -814,7 +852,8 @@ input.c-button:hover:after,
   }
 
   .l-fv__srcolldown__text {
-    font-size: 22px;
+    white-space: nowrap;
+    font-size: 7vw;
   }
 
   .l-fv__srcolldown__arrow {
@@ -823,6 +862,11 @@ input.c-button:hover:after,
     margin: 0 auto;
     position: relative;
     animation: moveUpDown 2s infinite;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l-fv__srcolldown__text {
+    font-size: 6vw;
   }
 }
 .l-top-about {
@@ -1250,7 +1294,7 @@ input.c-button:hover:after,
   .l-top-interview {
     padding: 80px 0;
     background-image: url(../img/bg/bg-top-interview.png);
-    background-size: 700%;
+    background-size: 900%;
   }
   .l-top-interview__title {
     margin-bottom: 50px;

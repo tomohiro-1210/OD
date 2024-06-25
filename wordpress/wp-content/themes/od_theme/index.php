@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/hgi0fdm.css">
 
+    <!-- zen old mincho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+
     <!-- slickのCSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -69,22 +74,13 @@
       </ul>
     </div>
     <!-- /header -->
-    <div class="loading" id="loading">
-      <div class="loading__inner">
-        <div class="loading__load">Loading Now…</div>
-        <div class="loading__logo" id="loading-logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/loading-logo.png" alt="logo-hoshitetsu">
-        </div>
-        <div class="loading__percent" id="percent"></div>
-      </div>
-    </div>
     <!-- main -->
     <main>
       <!-- TOPFV -->
        <div class="l-fv">
         <!-- スクロールダウン -->
          <div class="l-fv__scrolldown">
-          <p class="l-fv__srcolldown__text">Scroll down</p>
+          <p class="l-fv__srcolldown__text">ダクトのパイオニアとして<br>従事してきた我々の使命</p>
           <div class="l-fv__srcolldown__arrow" id="scrolldown__arrow">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/scrolldown.png" alt="scrolldown">
           </div>

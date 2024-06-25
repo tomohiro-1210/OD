@@ -82,26 +82,6 @@ $(document).ready(function() {
     });
 });
 
-//テキストのカウントアップ+バーの設定
-var bar = new ProgressBar.Line(percent, {//id名を指定
-    strokeWidth: 0,//進捗ゲージの太さ
-    duration: 1000,//時間指定(1000＝1秒)
-    trailWidth: 0,//線の太さ
-    text: {//テキストの形状を直接指定 
-      style: {//天地中央に配置
-        color:'#f9f9f9',
-      },
-      autoStyleContainer: false //自動付与のスタイルを切る
-    },
-    step: function(state, bar) {
-      bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
-    }
-  });
-  //アニメーションスタート
-  bar.animate(0.5, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
-    $("#loading").delay(500).fadeOut(500);//アニメーションが終わったら#splashエリアをフェードアウト
-  }); 
-
 //   scrolldown
 document.getElementById('scrolldown__arrow').addEventListener('click', function() {
     var element = document.querySelector('.animated-element');
