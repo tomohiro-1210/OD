@@ -121,7 +121,7 @@ input.c-button,
   font-family: "Noto Sans JP", sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: white;
+  color: #F9F9F9;
   padding: 20px 40px;
   margin: 0 auto;
   background: linear-gradient(to right, #2B32B2, #007BFF);
@@ -638,7 +638,7 @@ input.c-button:hover:after,
   }
 }
 .top-button {
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .entry-button {
@@ -839,13 +839,13 @@ input.c-button:hover:after,
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-top: 0px;
+    margin-top: 54px;
   }
   
   /* スクロールダウン */
   .l-fv__scrolldown {
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     right: 50%;
     transform: translateX(50%);
     z-index: 10;
@@ -871,7 +871,7 @@ input.c-button:hover:after,
 }
 .l-top-about {
   padding: 60px 20px 0;
-  margin-top: 160px;
+  margin-top: 120px;
   position: relative;
 }
 .l-top-about__bg {
@@ -887,7 +887,7 @@ input.c-button:hover:after,
   z-index: -1;
 }
 .l-top-about__title {
-  margin-bottom: 160px;
+  margin-bottom: 80px;
 }
 .l-top-about__catch {
   font-size: 48px;
@@ -1162,8 +1162,7 @@ input.c-button:hover:after,
     text-align: center;
   }
   .l-top-about {
-    padding: 30px 20px 0;
-    margin-top: 80px;
+    padding: 110px 20px 0;
   }
   .l-top-about__bg {
     width: 100vw;
@@ -1713,6 +1712,7 @@ input.c-button:hover:after,
     margin-bottom: 30px;
   }
   .p-works__list {
+    background-image: url(../img/bg/bg-works-sp.png);
     padding: 60px 0 100px;
   }
   .p-works__item {

@@ -67,17 +67,30 @@ $(document).ready(function() {
     var kv = $('.l-kv'); // 対象の要素
     var fv = $('.l-fv'); // 対象の要素
     var kvOffsetTop = kv.outerHeight();
-    var fvOffsetTop = fv.outerHeight();
+    var fvOffsetTop = fv.offset().top; // .l-fvの上端位置
+    var fvHeight = fv.outerHeight(); // .l-fvの高さ
+
+    console.log(fvOffsetTop);
 
     $(window).on('scroll', function() {
         var scrollTop = $(this).scrollTop();
 
-        if (scrollTop > kvOffsetTop || scrollTop > fvOffsetTop) {
+        // 下層ページのロゴ切り替え
+        if (scrollTop > kvOffsetTop) {
             whiteLogo.addClass('hide');
             blackLogo.addClass('show');
         } else {
             whiteLogo.removeClass('hide');
             blackLogo.removeClass('show');
+        }
+
+        // TOPページのロゴ切り替え
+        if (scrollTop >= fvOffsetTop && scrollTop < (fvOffsetTop + fvHeight)) {
+            whiteLogo.removeClass('hide');
+            blackLogo.removeClass('show');
+        } else {
+            whiteLogo.addClass('hide');
+            blackLogo.addClass('show');
         }
     });
 });

@@ -36,8 +36,8 @@
           <h1 class="l-header__logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
           </div>
           <div class="sp-on">
-            <h1 class="l-header__logo white-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
-            <h1 class="l-header__logo black-logo"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
+            <h1 class="l-header__logo white-logo hide"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-white.png" alt="logo"></a></h1>
+            <h1 class="l-header__logo black-logo show"><a href="<?php echo esc_url(get_home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo-od-black.png" alt="logo"></a></h1>
           </div>
         </div>
         <!-- メニューの時表示 -->
@@ -123,8 +123,8 @@
           <span class="c-top-title__en">About Us</span>
           <span class="c-top-title__ja">技術で空気を繋ぐ</span>
         </h2>
-        <p class="l-top-about__catch" data-fadeIn>ダクトのパイオニアとして<br>
-          従事してきた我々の使命</p>
+        <!-- <p class="l-top-about__catch" data-fadeIn>ダクトのパイオニアとして<br>
+          従事してきた我々の使命</p> -->
         <p class="l-top-about__text" data-fadeIn>有限会社オーディーは平成13年に<br class="sp-on">創業し長きにわたってダクトを通じ、<br>
           日本の空気を技術で守ってまいりました。<br>
           経験に基づく豊富な知識と技術で<br class="sp-on">安全で高品質な施工はもちろん、<br>
