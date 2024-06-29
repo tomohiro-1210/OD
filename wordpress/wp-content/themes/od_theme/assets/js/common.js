@@ -1,5 +1,5 @@
 // headerのハンバーガーメニュー
-$(".l-header__hamburger").click(function () {
+$(".l-header__hamburger__inner").click(function () {
     $(this).toggleClass('open');
     $(".l-header-sp-menu").toggleClass('open');
     $(".l-header-sp-menu").toggleClass('hide');
@@ -64,39 +64,31 @@ $(function () {
 $(document).ready(function() {
     const whiteLogo = $('.white-logo');
     const blackLogo = $('.black-logo');
-    var kv = $('.l-kv'); // 対象の要素
-    var fv = $('.l-fv'); // 対象の要素
+    var kv = $('.l-kv'); //下層PのFV
     var kvOffsetTop = kv.outerHeight();
-    var fvOffsetTop = fv.offset().top; // .l-fvの上端位置
-    var fvHeight = fv.outerHeight(); // .l-fvの高さ
 
-    console.log(fvOffsetTop);
+    var worksTOP = $('.p-works__top');
+    var worksOffsetTop = worksTOP.outerHeight();
+
+    // KVと事業案内の高さを足す
+    var worksHeight = kvOffsetTop + worksOffsetTop + 160;
 
     $(window).on('scroll', function() {
-        var scrollTop = $(this).scrollTop();
-
+        var kvscrollTop = $(this).scrollTop();
+    
         // 下層ページのロゴ切り替え
-        if (scrollTop > kvOffsetTop) {
+        if (kvscrollTop > kvOffsetTop ) {
             whiteLogo.addClass('hide');
             blackLogo.addClass('show');
-        } else {
-            whiteLogo.removeClass('hide');
-            blackLogo.removeClass('show');
-        }
 
-        // TOPページのロゴ切り替え
-        if (scrollTop >= fvOffsetTop && scrollTop < (fvOffsetTop + fvHeight)) {
+            // スクロールがKVと事業案内の高さを超えた時に発動
+            if(kvscrollTop >= worksHeight){
+                whiteLogo.removeClass('hide');
+                blackLogo.removeClass('show');
+            }
+        } else {
             whiteLogo.removeClass('hide');
             blackLogo.removeClass('show');
-        } else {
-            whiteLogo.addClass('hide');
-            blackLogo.addClass('show');
         }
     });
-});
-
-//   scrolldown
-document.getElementById('scrolldown__arrow').addEventListener('click', function() {
-    var element = document.querySelector('.animated-element');
-    element.classList.toggle('move-up');
 });

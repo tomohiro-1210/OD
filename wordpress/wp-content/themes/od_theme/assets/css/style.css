@@ -301,17 +301,17 @@ input.c-button:hover:after,
   height: 84px;
   background: linear-gradient(to right, #2B32B2, #007BFF);
   display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
+  position: relative;
 }
 .l-header__hamburger__inner {
+  width: 40px;
+  height: 28px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.l-header__hamburger span {
+.l-header__hamburger__inner span {
   display: block;
   width: 40px;
   height: 4px;
@@ -319,22 +319,22 @@ input.c-button:hover:after,
   background-color: #fff;
   transition: all 0.3s;
 }
-.l-header__hamburger span:nth-child(2n) {
+.l-header__hamburger__inner span:nth-child(2n) {
   margin: 8px 0;
 }
-.l-header__hamburger.open span {
+.l-header__hamburger__inner.open span {
   display: block;
 }
-.l-header__hamburger.open span:nth-child(1n) {
+.l-header__hamburger__inner.open span:nth-child(1n) {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.l-header__hamburger.open span:nth-child(2n) {
+.l-header__hamburger__inner.open span:nth-child(2n) {
   opacity: 0;
 }
-.l-header__hamburger.open span:nth-child(3n) {
+.l-header__hamburger__inner.open span:nth-child(3n) {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -381,6 +381,10 @@ input.c-button:hover:after,
     height: 54px;
     margin-top: 0px;
   }
+  .l-header__inner{
+    padding: 0 0 0 20px;
+    width: auto;
+  }
   .l-header__logo {
     max-width: 300px;
     width: 70%;
@@ -391,6 +395,10 @@ input.c-button:hover:after,
   .l-header__hamburger {
     width: 54px;
     height: 54px;
+  }
+  .l-header__hamburger__inner{
+    width: 28px;
+    height: 28px;
   }
   .l-header__hamburger span {
     width: 28px;
@@ -845,7 +853,7 @@ input.c-button:hover:after,
   /* スクロールダウン */
   .l-fv__scrolldown {
     position: absolute;
-    bottom: 15%;
+    bottom: 30%;
     right: 50%;
     transform: translateX(50%);
     z-index: 10;

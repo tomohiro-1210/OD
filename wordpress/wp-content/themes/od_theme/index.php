@@ -195,7 +195,7 @@
           </div>
           <!-- 事業案内 -->
            <div class="l-top-business__right" data-fadeIn>
-            <p class="l-top-business__information">事業案内</p>
+            <!-- <p class="l-top-business__information">事業案内</p> -->
             <p class="l-top-business__text">当社では、主なダクトとしてシェアのある排気・換気ダクト、空調ダクト、厨房排気ダクト、排煙ダクトの全てのダクトの施工を行なっております。<br>
               建築物に合わせた最適なダクトの施工をご提案いたします。</p>
            </div>
@@ -361,3 +361,34 @@
 
     <!-- footer -->
     <?php get_footer(); ?>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
+  <script>// ロゴの切り替え
+    $(document).ready(function() {
+        const whiteLogo = $('.white-logo');
+        const blackLogo = $('.black-logo');
+        var fv = $('.l-fv'); 
+        var fvOffsetTop = fv.offset().top; // .l-fvの上端位置
+        var fvHeight = fv.outerHeight(); // .l-fvの高さ
+
+        $(window).on('scroll', function() {
+            var fvscrollTop = $(this).scrollTop();
+
+            // TOPページのロゴ切り替え
+            if (fvscrollTop >= fvOffsetTop && fvscrollTop < (fvOffsetTop + fvHeight)) {
+                whiteLogo.removeClass('hide');
+                blackLogo.removeClass('show');
+            } else {
+                whiteLogo.addClass('hide');
+                blackLogo.addClass('show');
+            }
+        });
+    });
+    //   scrolldown
+    document.getElementById('scrolldown__arrow').addEventListener('click', function() {
+        var element = document.querySelector('.animated-element');
+        element.classList.toggle('move-up');
+    });
+</script>
+    
+</body>
+</html>
