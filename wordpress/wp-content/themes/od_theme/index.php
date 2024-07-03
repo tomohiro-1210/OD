@@ -147,7 +147,7 @@
               <span class="c-top-title__ja">最新情報</span>
             </h2>
             <div class="pc-on">
-              <a href="" class="c-button top-button">最新情報一覧へ</a>
+              <a href="<?php echo esc_url(get_home_url()); ?>/news" class="c-button top-button">最新情報一覧へ</a>
             </div>
           </div>
           <!-- 最新情報一覧 -->
